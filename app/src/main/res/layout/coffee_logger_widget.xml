@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#09C"
+    android:padding="@dimen/widget_margin"
+    android:id="@+id/widget_layout"
+    android:orientation="vertical"
+    android:gravity="center">
+    <TextView style="@style/WidgetButtonVerticalSpace" />
+    <TextView
+        android:id="@+id/appwidget_text"
+        style="@style/WidgetTextView.Big" />
+    <TextView
+        style="@style/WidgetTextView"
+        android:text="@string/grams" />
+    <TextView style="@style/WidgetButtonVerticalSpace" />
+</LinearLayout>

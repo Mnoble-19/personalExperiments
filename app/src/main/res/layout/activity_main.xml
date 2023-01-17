@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
   android:id="@+id/main_coordinator"
   android:layout_width="match_parent"
   android:layout_height="match_parent">
 
-  <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+  <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <android.support.v7.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
           style="@style/BeverageButton"
           android:drawableStart="@drawable/ic_ristretto"
           android:onClick="onRistrettoPressed"
@@ -92,7 +92,7 @@
           android:layout_height="1dp"
           android:background="@color/add_coffee_background" />
 
-        <android.support.v7.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
           style="@style/BeverageButton"
           android:drawableStart="@drawable/ic_espresso"
           android:onClick="onEspressoPressed"
@@ -103,7 +103,7 @@
           android:layout_height="1dp"
           android:background="@color/add_coffee_background" />
 
-        <android.support.v7.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
           style="@style/BeverageButton"
           android:drawableStart="@drawable/ic_long_coffee"
           android:onClick="onLongPressed"
@@ -113,5 +113,5 @@
       </LinearLayout>
     </ScrollView>
 
-  </android.support.constraint.ConstraintLayout>
-</android.support.design.widget.CoordinatorLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
