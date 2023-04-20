@@ -84,3 +84,10 @@ lint/outputs/
 lint/tmp/
 .idea
 # lint/reports/
+
+licenses/
+libs/
+config/
+logs/
+
+.DS_Store/
