@@ -1,0 +1,36 @@
+#contains details of the deployment of mlflow
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mlflow
+  namespace: mlflow
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mlflow
+  template:
+    metadata:
+      labels:
+        app: mlflow
+    spec:
+      containers:
+        - name: mlflow
+          image: ghcr.io/mlflow/mlflow:v2.7.1
+          envFrom:
+            - configMapRef:
+                name: mlflow-configmap
+          env:
+            - name: GOOGLE_APPLICATION_CREDENTIALS
+              value: "var/secrets/google/gcs-credentials.json"
+          volumeMounts:
+            - name: gcs-credentials
+              mountPath: "/var/secrets/google"
+              readOnly: true
+      volumes:
+        - name: gcs-credentials
+          secret:
+            secretName: gcs-credentials
+            items:
+              - key: gcs-credentials.json
+                path: gcs-credentials.json

@@ -1,0 +1,7 @@
+# This is the namespace for MLFlow deployment
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: mlflow
+  labels:
+    name: mlflow
