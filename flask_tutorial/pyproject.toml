@@ -1,0 +1,9 @@
+[project]
+name = "flaskr"
+version = "1.0.0"
+description = "Flaskr sample project"
+dependencies = ["flask"]
+
+[build-system]
+requires = ["flit-core<4"]
+build-backend = "flit_core.buildapi"
